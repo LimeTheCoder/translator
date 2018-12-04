@@ -47,11 +47,11 @@ class CommentProcessor(InputProcessor):
 
     def process(self, ch):
         self.scanner.make_checkpoint()
-        prev = ch
         curr = self.scanner.read_next()
         if curr != '*':
-            raise UnexpectedSymbolException(self.scanner.get_checkpoint(), prev)
+            raise UnexpectedSymbolException(self.scanner.get_checkpoint(), ch)
 
+        prev = curr = ''
         while prev != '*' or curr != ')':
             prev = curr
             curr = self.scanner.read_next()
