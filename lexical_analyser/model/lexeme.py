@@ -1,11 +1,12 @@
 class Lexeme:
-    def __init__(self, code, value, position):
+    def __init__(self, code, value, position, lexeme_type):
         self.code = code
         self.value = value
         self.position = position
+        self.type = lexeme_type
 
     def __repr__(self):
-        return "{0} {1} {2}".format(self.code, self.value, self.position)
+        return "{0} {1}".format(self.code, self.value)
 
 
 class Position:

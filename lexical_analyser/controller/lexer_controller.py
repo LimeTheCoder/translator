@@ -1,4 +1,4 @@
-from controller.processor import IdentifierProcessor, SpacesProcessor, CommentProcessor, DelimitersProcessor, \
+from lexical_analyser.controller.processor import IdentifierProcessor, SpacesProcessor, CommentProcessor, DelimitersProcessor, \
     NumberProcessor, ErrorProcessor
 
 
@@ -21,4 +21,5 @@ class Controller:
                 processor = next((p for p in self.processors if p.accept(ch)), self.error_processor)
                 ch = processor.process(ch)
         finally:
-            self.view.display(self.model.get_model_data())
+            if self.view:
+                self.view.display(self.model.get_model_data())

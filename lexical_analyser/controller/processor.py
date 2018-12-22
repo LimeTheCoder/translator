@@ -1,4 +1,5 @@
-from controller.exceptions import UnexpectedSymbolException, UnexpectedEndOfFileException
+from lexical_analyser.controller.exceptions import UnexpectedSymbolException, UnexpectedEndOfFileException
+from lexical_analyser.model import keywords
 
 
 class InputProcessor:
@@ -63,7 +64,7 @@ class CommentProcessor(InputProcessor):
 
 
 class DelimitersProcessor(InputProcessor):
-    __DELIMITERS = ['.', ';', '=']
+    __DELIMITERS = [keywords.DOT, keywords.SEMICOLON, keywords.EQUAL]
 
     def accept(self, ch):
         return ch in self.__DELIMITERS

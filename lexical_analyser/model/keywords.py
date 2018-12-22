@@ -1,0 +1,11 @@
+PROGRAM = "PROGRAM"
+BEGIN = "BEGIN"
+END = "END"
+CONST = "CONST"
+IF = "IF"
+FI = "FI"
+THEN = "THEN"
+
+DOT = "."
+SEMICOLON = ";"
+EQUAL = "="

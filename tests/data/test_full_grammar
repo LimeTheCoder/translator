@@ -1,10 +1,7 @@
 PROGRAM TEST1;
 
-CONST
-    DAREN=56;
-    VARIABLE = +356#94;
-    CASH = 987#-321;
-
 BEGIN
     (* My Test Program *)
+    IF DAREN=56; THEN 987#-321 FI
+    IF VARIABLE = +356#94; THEN 54 FI
 END.

@@ -1,0 +1,5 @@
+PROGRAM TEST1;
+
+BEGIN
+    (* My Test Program *)
+END.

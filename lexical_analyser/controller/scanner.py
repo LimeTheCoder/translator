@@ -1,4 +1,4 @@
-from model.lexeme import Position
+from lexical_analyser.model.lexeme import Position
 
 
 class Scanner:
